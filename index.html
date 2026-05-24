@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Archivo:wght@100;200;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -109,8 +110,8 @@
         <div class="profil-grid">
           <div class="reveal">
             <div class="profil-photo">
+              <img src="foto/FOTO 1.jpg" alt="Profile Photo">
               <!-- <img src="foto.jpg" alt="Foto"> -->
-              <span>👤</span>
             </div>
             <div class="profil-stats">
               <div class="pstat">
@@ -142,127 +143,257 @@
             </p>
             <div style="margin-top: 24px">
               <p class="info-title">Riwayat Keluarga</p>
-              <div class="info-row">
-                <span>Ayah</span><span>Lorem Ipsum Pater — Wirausahawan</span>
-              </div>
-              <div class="info-row">
-                <span>Ibu</span
-                ><span>Lorem Ipsum Mater — Ibu Rumah Tangga</span>
-              </div>
-              <div class="info-row">
-                <span>Anak ke-</span><span>2 dari 3 bersaudara</span>
-              </div>
-              <div class="info-row">
-                <span>Domisili</span><span>Kota Lorem, Provinsi Ipsum</span>
-              </div>
-              <div class="info-row">
-                <span>TTL</span><span>Lorem, 01 Januari 2006</span>
-              </div>
-              <div class="info-row"><span>Agama</span><span>Islam</span></div>
+              <p class="profil-bio">
+                Saya berasal dari keluarga sederhana dan merupakan anak kedua dari dua bersaudara. Saya memiliki seorang kakak perempuan yang berusia dua tahun lebih tua dari saya.
+                <br> <br> Ibu saya adalah seorang ibu rumah tangga, dan ayah saya bekerja sebagai karyawan swasta. Lingkungan keluarga saya mengajarkan nilai tanggung jawab, kesederhanaan, dan pentingnya untuk tetap rendah hati.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- PENDIDIKAN — Wave Timeline -->
+      <!-- PENDIDIKAN — Animated Timeline Canvas -->
       <div class="acc-panel" id="panel-pendidikan">
-        <div class="edu-wave-section reveal">
-          <div class="edu-items">
-            <div
-              class="edu-item"
-              id="edu1"
-              style="align-self: start; padding-top: 20px"
-            >
-              <div class="edu-dot-label">
-                <span class="edu-cal">📅</span>
-                <span class="edu-date">2024 — Sekarang</span>
+        <style>
+          .ew { background: transparent; border-radius: 0; padding: 20px 0; position: relative; }
+          .ew-hd { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+          .ew-badge { display: inline-flex; align-items: center; gap: 7px; background: #1a1a1a; border: 0.5px solid #2a2a2a; border-radius: 20px; padding: 6px 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: #888; }
+          .ew-dot-red { width: 7px; height: 7px; border-radius: 50%; background: #c0392b; flex-shrink: 0; }
+          .ew-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #fff; letter-spacing: -0.5px; }
+          .ew-scene { position: relative; width: 100%; height: 400px; }
+          #ewCanvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+          .ew-label { position: absolute; opacity: 0; transform: translateY(8px); transition: opacity .45s ease, transform .45s ease; width: 155px; }
+          .ew-label.show { opacity: 1; transform: translateY(0); }
+          .ew-label-date { display: flex; align-items: center; gap: 5px; font-family: 'DM Mono', monospace; font-size: 10px; color: #666; margin-bottom: 6px; letter-spacing: .5px; }
+          .ew-label-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #fff; line-height: 1.25; margin-bottom: 3px; }
+          .ew-label-sub { font-family: 'Archivo', sans-serif; font-size: 11px; color: #666; margin-bottom: 5px; }
+          .ew-label-desc { font-family: 'Archivo', sans-serif; font-size: 11px; color: #777; line-height: 1.65; }
+          .ew-active { color: #c0392b !important; }
+          .ew-replay { display: flex; justify-content: center; margin-top: 20px; }
+          .ew-replay button { background: none; border: 0.5px solid #2a2a2a; border-radius: 20px; color: #666; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; padding: 6px 18px; cursor: pointer; transition: border-color .2s, color .2s; }
+          .ew-replay button:hover { border-color: #555; color: #bbb; }
+        </style>
+
+        <div class="ew">
+          <div class="ew-scene">
+            <canvas id="ewCanvas"></canvas>
+            <div class="ew-label" id="el0">
+              <div class="ew-label-date">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                2013 — 2015
               </div>
-              <span class="edu-tag current">Active</span>
-              <h3 class="edu-school">SMK Negeri 7 Semarang</h3>
-              <p class="edu-jurusan">Sistem Informasi Jaringan & Aplikasi</p>
-              <p class="edu-desc">
-                Mempelajari pemrograman web, desain antarmuka, cyber security,
-                dan IoT.
-              </p>
+              <div class="ew-label-name">TK PGRI 24 Semarang</div>
+              <div class="ew-label-sub">Pengembangan dini</div>
+              <div class="ew-label-desc">Fokus pada pengembangan aspek sosial dan komunikasi interpersonal sejak usia dini.</div>
             </div>
-            <div class="edu-item" id="edu2" style="align-self: center">
-              <div class="edu-dot-label">
-                <span class="edu-cal">📅</span>
-                <span class="edu-date">2021 — 2024</span>
+            <div class="ew-label" id="el1">
+              <div class="ew-label-date">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                2015 — 2021
               </div>
-              <span class="edu-tag">Lulus</span>
-              <h3 class="edu-school">SMP Negeri 27 Semarang</h3>
-              <p class="edu-jurusan">Lulus dengan predikat Baik</p>
-              <p class="edu-desc">
-                Peringkat 1 selama tiga semester. Aktif dalam mengikuti lomba
-                matematika dan bahasa inggris.
-              </p>
+              <div class="ew-label-name">SD Negeri Srondol Kulon 02 Semarang</div>
+              <div class="ew-label-sub">Lulus nilai memuaskan</div>
+              <div class="ew-label-desc">Masa pembentukan karakter. Aktif dalam mengikuti lomba OSN IPA.</div>
             </div>
-            <div
-              class="edu-item"
-              id="edu3"
-              style="align-self: end; padding-bottom: 40px"
-            >
-              <div class="edu-dot-label">
-                <span class="edu-cal">📅</span>
-                <span class="edu-date">2016 — 2021</span>
+            <div class="ew-label" id="el2">
+              <div class="ew-label-date">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                2021 — 2024
               </div>
-              <span class="edu-tag">Lulus</span>
-              <h3 class="edu-school">SD Negeri Srondol Kulon 02</h3>
-              <p class="edu-jurusan">Lulus dengan nilai memuaskan</p>
-              <p class="edu-desc">
-                Masa pembentukan karakter. Aktif dalam mengikuti lomba OSN IPA.
-              </p>
+              <div class="ew-label-name">SMP Negeri 27 Semarang</div>
+              <div class="ew-label-sub">● Lulus predikat terbaik</div>
+              <div class="ew-label-desc">Peringkat 1 selama tiga semester. Aktif dalam mengikuti lomba matematika dan bahasa inggris.</div>
+            </div>
+            <div class="ew-label" id="el3">
+              <div class="ew-label-date">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                2024 — Sekarang
+              </div>
+              <div class="ew-label-name">SMK Negeri  7 Semarang</div>
+              <div class="ew-label-sub ew-active">● Activve · SIJA</div>
+              <div class="ew-label-desc">Mempelajari pemrograman web, desain antarmuka, cyber security, dan IoT.</div>
             </div>
           </div>
-          <!-- SVG Wave Line -->
-          <svg
-            class="edu-wave-svg"
-            viewBox="0 0 1200 140"
-            preserveAspectRatio="none"
-            height="140"
-            style="
-              position: absolute;
-              bottom: 30px;
-              left: 0;
-              right: 0;
-              width: 100%;
-            "
-          >
-            <path
-              id="wavePath"
-              d="M 60 110 C 200 110 250 50 400 70 C 550 90 600 30 750 50 C 900 70 950 20 1140 20"
-              fill="none"
-              stroke="#444240"
-              stroke-width="1.5"
-              stroke-dasharray="8 6"
-            />
-            <circle
-              cx="400"
-              cy="70"
-              r="7"
-              fill="#0a0a0a"
-              stroke="#888785"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="750"
-              cy="50"
-              r="7"
-              fill="#0a0a0a"
-              stroke="#888785"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="1140"
-              cy="20"
-              r="7"
-              fill="#f5f4f0"
-              stroke="#f5f4f0"
-              stroke-width="1.5"
-            />
-          </svg>
+          <div class="ew-replay"><button id="ewReplay">↺ Putar ulang</button></div>
         </div>
+
+        <script>
+          const cv   = document.getElementById('ewCanvas');
+          const ctx  = cv.getContext('2d');
+          let W, H, pts, lensArr, totalLen, dotPx;
+          const DOTS = [
+            { fx: 0.10, fy: 0.30 },
+            { fx: 0.36, fy: 0.42 },
+            { fx: 0.64, fy: 0.26 },
+            { fx: 0.88, fy: 0.18 },
+          ];
+          const LABELS  = ['el0','el1','el2','el3'];
+          const shown   = [false, false, false, false];
+          const GAP     = 14;
+          const CONN    = 68;
+          function ctrlPts(w, h) {
+            return [
+              { x: 0,         y: h * 0.50 },
+              { x: w * 0.04,  y: h * 0.40 },
+              { x: w * 0.08,  y: h * 0.32 },
+              { x: w * 0.10,  y: h * 0.30 },
+              { x: w * 0.14,  y: h * 0.32 },
+              { x: w * 0.22,  y: h * 0.40 },
+              { x: w * 0.30,  y: h * 0.44 },
+              { x: w * 0.36,  y: h * 0.42 },
+              { x: w * 0.42,  y: h * 0.40 },
+              { x: w * 0.50,  y: h * 0.34 },
+              { x: w * 0.58,  y: h * 0.28 },
+              { x: w * 0.64,  y: h * 0.26 },
+              { x: w * 0.70,  y: h * 0.24 },
+              { x: w * 0.78,  y: h * 0.20 },
+              { x: w * 0.88,  y: h * 0.18 },
+              { x: w * 0.94,  y: h * 0.16 },
+              { x: w,         y: h * 0.14 },
+            ];
+          }
+          function spline(cp, steps) {
+            const r = [];
+            for (let i = 0; i < cp.length - 1; i++) {
+              const p0 = cp[Math.max(i-1, 0)];
+              const p1 = cp[i];
+              const p2 = cp[i+1];
+              const p3 = cp[Math.min(i+2, cp.length-1)];
+              for (let t = 0; t < steps; t++) {
+                const s = t/steps, s2 = s*s, s3 = s2*s;
+                r.push({
+                  x: .5*((2*p1.x)+(-p0.x+p2.x)*s+(2*p0.x-5*p1.x+4*p2.x-p3.x)*s2+(-p0.x+3*p1.x-3*p2.x+p3.x)*s3),
+                  y: .5*((2*p1.y)+(-p0.y+p2.y)*s+(2*p0.y-5*p1.y+4*p2.y-p3.y)*s2+(-p0.y+3*p1.y-3*p2.y+p3.y)*s3),
+                });
+              }
+            }
+            r.push(cp[cp.length-1]);
+            return r;
+          }
+          function makeLens(p) {
+            const l = [0]; let tot = 0;
+            for (let i = 1; i < p.length; i++) {
+              const dx = p[i].x - p[i-1].x, dy = p[i].y - p[i-1].y;
+              tot += Math.sqrt(dx*dx + dy*dy);
+              l.push(tot);
+            }
+            return { l, tot };
+          }
+          function nearestLen(fx, fy) {
+            const tx = fx*W, ty = fy*H;
+            let best = Infinity, bi = 0;
+            pts.forEach((p, i) => {
+              const d = (p.x-tx)**2 + (p.y-ty)**2;
+              if (d < best) { best = d; bi = i; }
+            });
+            return lensArr[bi];
+          }
+          function init() {
+            const wrap = cv.parentElement;
+            W = wrap.clientWidth;
+            H = wrap.clientHeight;
+            cv.width  = W;
+            cv.height = H;
+            pts = spline(ctrlPts(W, H), 36);
+            const ml = makeLens(pts);
+            lensArr  = ml.l;
+            totalLen = ml.tot;
+            dotPx = DOTS.map((d, di) => {
+              const x = d.fx * W;
+              const y = d.fy * H;
+              const thresh = nearestLen(d.fx, d.fy);
+              const labelTop = y + GAP + CONN;
+              const el = document.getElementById(LABELS[di]);
+              el.style.top    = labelTop + 'px';
+              el.style.bottom = 'auto';
+              const labelW = 155;
+              let left = x - labelW / 2;
+              left = Math.max(0, Math.min(left, W - labelW));
+              el.style.left  = left + 'px';
+              el.style.right = 'auto';
+              return { x, y, thresh };
+            });
+          }
+          function drawFrame(prog) {
+            ctx.clearRect(0, 0, W, H);
+            const target = prog * totalLen;
+            ctx.beginPath();
+            ctx.moveTo(pts[0].x, pts[0].y);
+            for (let i = 1; i < pts.length; i++) {
+              if (lensArr[i] > target) {
+                const fr = (target - lensArr[i-1]) / (lensArr[i] - lensArr[i-1]);
+                ctx.lineTo(
+                  pts[i-1].x + (pts[i].x - pts[i-1].x) * fr,
+                  pts[i-1].y + (pts[i].y - pts[i-1].y) * fr
+                );
+                break;
+              }
+              ctx.lineTo(pts[i].x, pts[i].y);
+            }
+            ctx.strokeStyle = 'rgba(160,158,150,.75)';
+            ctx.lineWidth   = 1.8;
+            ctx.lineCap     = 'round';
+            ctx.lineJoin    = 'round';
+            ctx.stroke();
+            dotPx.forEach((d, di) => {
+              if (target < d.thresh) return;
+              ctx.beginPath();
+              ctx.moveTo(d.x, d.y + GAP);
+              ctx.lineTo(d.x, d.y + GAP + CONN);
+              ctx.strokeStyle = 'rgba(90,88,82,.5)';
+              ctx.lineWidth   = 1;
+              ctx.setLineDash([3, 4]);
+              ctx.stroke();
+              ctx.setLineDash([]);
+              ctx.beginPath();
+              ctx.arc(d.x, d.y, 11, 0, Math.PI*2);
+              ctx.fillStyle   = '#111';
+              ctx.fill();
+              ctx.strokeStyle = 'rgba(155,153,145,.8)';
+              ctx.lineWidth   = 1.5;
+              ctx.stroke();
+              ctx.beginPath();
+              ctx.arc(d.x, d.y, 5, 0, Math.PI*2);
+              ctx.fillStyle = di === DOTS.length - 1 ? 'rgba(192,57,43,.7)' : 'rgba(155,153,145,.55)';
+              ctx.fill();
+              if (!shown[di]) {
+                shown[di] = true;
+                document.getElementById(LABELS[di]).classList.add('show');
+              }
+            });
+          }
+          let raf, t0;
+          const DUR = 2600;
+          function animate(ts) {
+            if (!t0) t0 = ts;
+            const p = Math.min((ts - t0) / DUR, 1);
+            const e = p < .5 ? 2*p*p : 1 - (-2*p+2)**2/2;
+            drawFrame(e);
+            if (p < 1) raf = requestAnimationFrame(animate);
+          }
+          function start() {
+            cancelAnimationFrame(raf);
+            t0 = null;
+            shown.fill(false);
+            LABELS.forEach(id => document.getElementById(id).classList.remove('show'));
+            init();
+            raf = requestAnimationFrame(animate);
+          }
+          document.getElementById('ewReplay').addEventListener('click', start);
+          let fired = false;
+          new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && !fired) { fired = true; start(); }
+          }, { threshold: 0.25 }).observe(cv);
+          window.addEventListener('resize', () => { if (fired) start(); });
+        </script>
       </div>
 
       <!-- HOBI -->
@@ -279,9 +410,7 @@
               </div>
               <div class="hacc-body" style="max-height: 150px">
                 <div class="hacc-inner">
-                  Membuat proyek web mini sebagai sarana berlatih dan eksplorasi
-                  teknologi baru. Dari landing page sederhana hingga aplikasi
-                  web interaktif — setiap proyek adalah petualangan baru.
+                  Tertarik pada buku bertema psikologi, pengembangan diri, dan cara manusia berpikir. Saya suka memahami pola perilaku, emosi, serta bagaimana pikiran memengaruhi keputusan dalam kehidupan sehari-hari.
                 </div>
               </div>
             </div>
@@ -294,9 +423,7 @@
               </div>
               <div class="hacc-body">
                 <div class="hacc-inner">
-                  Mendesain UI Mockup dengan Figma dan Adobe XD. Suka
-                  mengeksplorasi tren desain terbaru dan menerapkannya ke dalam
-                  konsep antarmuka yang segar dan fungsional.
+                  Musik menjadi cara saya menjaga fokus dan suasana saat belajar maupun membuat proyek. Saya menikmati berbagai genre yang bisa membantu meningkatkan kreativitas dan mood.
                 </div>
               </div>
             </div>
@@ -309,9 +436,7 @@
               </div>
               <div class="hacc-body">
                 <div class="hacc-inner">
-                  Fotografi street dan urban — menangkap momen kehidupan
-                  sehari-hari dari sudut pandang berbeda. Kamera adalah cara
-                  lain untuk bercerita.
+                  Tertarik pada fashion sederhana dan clean aesthetic. Bagi saya, style bukan hanya soal penampilan, tetapi juga cara mengekspresikan karakter dan kepercayaan diri.
                 </div>
               </div>
             </div>
@@ -324,8 +449,7 @@
               </div>
               <div class="hacc-body">
                 <div class="hacc-inner">
-                  Bermain game strategi dan RPG sebagai hiburan sekaligus sarana
-                  melatih kemampuan berpikir analitis dan problem solving.
+                  Menjelajahi jalanan dan suasana baru dengan motor menjadi cara saya melepas penat sekaligus menikmati perjalanan dan momen sederhana.
                 </div>
               </div>
             </div>
@@ -359,9 +483,7 @@
               </div>
               <div class="hacc-body">
                 <div class="hacc-inner">
-                  Passion dalam membangun antarmuka web yang hidup, responsif,
-                  dan berperforma tinggi. Terus mengikuti perkembangan ekosistem
-                  JavaScript modern.
+                  Tertarik mengembangkan proyek Internet of Things (IoT) yang dapat memberikan solusi nyata dan berdampak bagi lingkungan maupun kehidupan sehari-hari.
                 </div>
               </div>
             </div>
@@ -447,7 +569,217 @@
           </div>
           <h2 class="skills-title">Tools &amp; Skills</h2>
         </div>
-        <div class="cards-grid" id="cardsGrid"></div>
+        
+        <style>
+          .pill-outer {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin-top: 40px;
+          }
+          .pill-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+          }
+          .pill-top-ghost {
+            width: 170px;
+            height: 85px;
+            border-radius: 85px 85px 0 0;
+            border: 1px solid #222;
+            border-bottom: none;
+            background: #111;
+            flex-shrink: 0;
+          }
+          .pill-body {
+            width: 170px;
+            height: 280px;
+            border-radius: 85px;
+            background: #141414;
+            border: 1px solid #222;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 30px;
+            flex-shrink: 0;
+            margin-top: -85px;
+            transition: border-color .3s;
+          }
+          .pill-wrap:hover .pill-body { border-color: #444; }
+          .pill-fill {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: #f5f4f0;
+            height: 0;
+            transition: height 1.3s cubic-bezier(.16, 1, .3, 1);
+            border-radius: 0 0 85px 85px;
+          }
+          .pill-icon-wrap {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #111;
+            border: 2px solid #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            transition: border-color .3s;
+          }
+          .pill-wrap:hover .pill-icon-wrap { border-color: #f5f4f0; }
+          .pill-icon-wrap i {
+            font-size: 42px;
+            color: #666;
+            transition: color .3s;
+            position: relative;
+            z-index: 1;
+          }
+          .pill-wrap:hover .pill-icon-wrap i { color: #f5f4f0; }
+          .pill-pct {
+            font-family: 'DM Mono', monospace;
+            font-size: 48px;
+            font-weight: 400;
+            color: #f5f4f0;
+            line-height: 1;
+            position: relative;
+            z-index: 2;
+            mix-blend-mode: difference;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity .4s .7s, transform .4s .7s;
+          }
+          .pill-name {
+            font-family: 'DM Mono', monospace;
+            font-size: 13px;
+            color: #f5f4f0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            mix-blend-mode: difference;
+            margin-top: 8px;
+            opacity: 0;
+            transition: opacity .3s 1s;
+            text-align: center;
+            padding: 0 8px;
+          }
+          .pill-wrap.fired .pill-pct  { opacity: 1; transform: translateY(0); }
+          .pill-wrap.fired .pill-name { opacity: 1; }
+          .pill-tooltip {
+            position: absolute;
+            bottom: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e1e1e;
+            border: 0.5px solid #333;
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #888;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s;
+            z-index: 10;
+          }
+          .pill-wrap:hover .pill-tooltip { opacity: 1; }
+        </style>
+        
+        <div class="pill-outer">
+          <div class="pill-wrap" data-pct="80">
+            <div class="pill-tooltip">Klik untuk replay</div>
+            <div class="pill-top-ghost"></div>
+            <div class="pill-body">
+              <div class="pill-icon-wrap"><i class="ti ti-code"></i></div>
+              <div class="pill-fill"></div>
+              <span class="pill-pct">80%</span>
+              <span class="pill-name">HTML</span>
+            </div>
+          </div>
+          <div class="pill-wrap" data-pct="60">
+            <div class="pill-tooltip">Klik untuk replay</div>
+            <div class="pill-top-ghost"></div>
+            <div class="pill-body">
+              <div class="pill-icon-wrap"><i class="ti ti-bolt"></i></div>
+              <div class="pill-fill"></div>
+              <span class="pill-pct">60%</span>
+              <span class="pill-name">CSS</span>
+            </div>
+          </div>
+          <div class="pill-wrap" data-pct="88">
+            <div class="pill-tooltip">Klik untuk replay</div>
+            <div class="pill-top-ghost"></div>
+            <div class="pill-body">
+              <div class="pill-icon-wrap"><i class="ti ti-vector-triangle"></i></div>
+              <div class="pill-fill"></div>
+              <span class="pill-pct">88%</span>
+              <span class="pill-name">IoT</span>
+            </div>
+          </div>
+          <div class="pill-wrap" data-pct="58">
+            <div class="pill-tooltip">Klik untuk replay</div>
+            <div class="pill-top-ghost"></div>
+            <div class="pill-body">
+              <div class="pill-icon-wrap"><i class="ti ti-atom"></i></div>
+              <div class="pill-fill"></div>
+              <span class="pill-pct">58%</span>
+              <span class="pill-name">Jaringan</span>
+            </div>
+          </div>
+          <div class="pill-wrap" data-pct="69">
+            <div class="pill-tooltip">Klik untuk replay</div>
+            <div class="pill-top-ghost"></div>
+            <div class="pill-body">
+              <div class="pill-icon-wrap"><i class="ti ti-server"></i></div>
+              <div class="pill-fill"></div>
+              <span class="pill-pct">69%</span>
+              <span class="pill-name">UI/UX</span>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+          const BODY_H = 280;
+          document.querySelectorAll('#skills .pill-wrap').forEach((card, i) => {
+            const pct  = parseInt(card.dataset.pct);
+            const fill = card.querySelector('.pill-fill');
+            let fired  = false;
+            function run() {
+              if (fired) return;
+              fired = true;
+              setTimeout(() => {
+                fill.style.height = (pct / 100 * BODY_H) + 'px';
+                card.classList.add('fired');
+              }, i * 120);
+            }
+            const obs = new IntersectionObserver(entries => {
+              if (entries[0].isIntersecting) { run(); obs.disconnect(); }
+            }, { threshold: 0.3 });
+            obs.observe(card);
+            card.addEventListener('click', () => {
+              fill.style.transition = 'none';
+              fill.style.height     = '0';
+              card.classList.remove('fired');
+              fired = false;
+              setTimeout(() => {
+                fill.style.transition = 'height 1.3s cubic-bezier(.16,1,.3,1)';
+                run();
+              }, 100);
+            });
+          });
+        </script>
       </div>
     </section>
 
@@ -462,7 +794,7 @@
           <div class="pf-card">
             <div
               class="pf-thumb"
-              style="background: linear-gradient(135deg, #111, #1c1c1c)"
+              style="background-image: url('foto/Smart Building & Smart Parking.jpg'); background-size: cover; background-position: center;"
             >
               <div class="pf-emoji">🌐</div>
               <div class="pf-overlay"></div>
@@ -487,7 +819,7 @@
           <div class="pf-card">
             <div
               class="pf-thumb"
-              style="background: linear-gradient(135deg, #111, #181818)"
+              style="background-image: url('https://picsum.photos/500/300?random=2'); background-size: cover; background-position: center;"
             >
               <div class="pf-emoji">🎨</div>
               <div class="pf-overlay"></div>
@@ -512,7 +844,7 @@
           <div class="pf-card">
             <div
               class="pf-thumb"
-              style="background: linear-gradient(135deg, #121212, #1a1a1a)"
+              style="background-image: url('foto/Screenshot 2026-05-16 195636.png'); background-size: cover; background-position: center;"
             >
               <div class="pf-emoji">📱</div>
               <div class="pf-overlay"></div>
@@ -538,7 +870,7 @@
           <div class="pf-card">
             <div
               class="pf-thumb"
-              style="background: linear-gradient(135deg, #111, #161616)"
+              style="background-image: url('foto/sertifikat mcm.jpeg'); background-size: cover; background-position: center;"
             >
               <div class="pf-emoji">🛒</div>
               <div class="pf-overlay"></div>
@@ -563,7 +895,7 @@
           <div class="pf-card">
             <div
               class="pf-thumb"
-              style="background: linear-gradient(135deg, #0e0e0e, #191919)"
+              style="background-image: url('foto/solve education.jpeg'); background-size: cover; background-position: center;"
             >
               <div class="pf-emoji">📊</div>
               <div class="pf-overlay"></div>
@@ -588,7 +920,7 @@
           <div class="pf-card">
             <div
               class="pf-thumb"
-              style="background: linear-gradient(135deg, #111, #1b1b1b)"
+              style="background-image: url('foto/minecraft.jpg'); background-size: cover; background-position: center;"
             >
               <div class="pf-emoji">🏫</div>
               <div class="pf-overlay"></div>
@@ -614,7 +946,7 @@
           <div class="pf-card">
           <div
               class="pf-thumb"
-              style="background: linear-gradient(135deg, #111, #1b1b1b)"
+              style="background-image: url('foto/music.jpg'); background-size: cover; background-position: center;"
             >
               <div class="pf-emoji">🏫</div>
               <div class="pf-overlay"></div>
@@ -674,10 +1006,10 @@
       <h2 class="sec-title">Curriculum Vitae</h2>
       <div class="cv-wrap reveal">
         <div class="cv-hd">
-          <div class="cv-photo">👤<!-- <img src="foto.jpg"> --></div>
+          <div class="cv-photo"> <img src="foto/cv.jpeg" alt="Profile Photo"> </div>
           <div>
-            <h2 class="cv-nm">Lorem Ipsum</h2>
-            <p class="cv-role">Web Developer · UI/UX Designer</p>
+            <h2 class="cv-nm">OKAN SANDI KURNIAWAN</h2>
+            <p class="cv-role">Creative Developer Web</p>
             <div class="cv-contacts">
               <span class="cv-ct"
                 ><span class="cv-ct-ic">✉</span>okansandi65@gmail.com</span
@@ -689,7 +1021,7 @@
                 ><span class="cv-ct-ic">⌂</span>Kota Semarang, Indonesia</span
               >
               <span class="cv-ct"
-                ><span class="cv-ct-ic">⊞</span>github.com/loremipsum</span
+                ><span class="cv-ct-ic">⊞</span>github.com/OKANSANDIKURNIAWAN</span
               >
             </div>
           </div>
@@ -699,13 +1031,13 @@
             <div class="cv-sec">
               <p class="cv-sec-t">Data Pribadi</p>
               <div class="cv-ir">
-                <span>Nama</span><strong>Lorem Ipsum</strong>
+                <span>Nama</span><strong>Okan Sandi Kurniawan</strong>
               </div>
               <div class="cv-ir">
-                <span>Panggilan</span><strong>Lori</strong>
+                <span>Panggilan</span><strong>Okan</strong>
               </div>
               <div class="cv-ir">
-                <span>TTL</span><strong>Lorem, 01 Jan 2006</strong>
+                <span>TTL</span><strong>Semarang, 03 Oktober 2008</strong>
               </div>
               <div class="cv-ir"><span>Agama</span><strong>Islam</strong></div>
               <div class="cv-ir">
@@ -715,33 +1047,33 @@
             <div class="cv-sec">
               <p class="cv-sec-t">Keahlian</p>
               <div class="cv-sb-bar">
-                <p class="cv-sb-nm">HTML &amp; CSS</p>
-                <div class="cv-sb-bg">
-                  <div class="cv-sb-fl" data-width="90"></div>
-                </div>
-              </div>
-              <div class="cv-sb-bar">
-                <p class="cv-sb-nm">JavaScript</p>
-                <div class="cv-sb-bg">
-                  <div class="cv-sb-fl" data-width="72"></div>
-                </div>
-              </div>
-              <div class="cv-sb-bar">
-                <p class="cv-sb-nm">Figma</p>
+                <p class="cv-sb-nm">HTML</p>
                 <div class="cv-sb-bg">
                   <div class="cv-sb-fl" data-width="80"></div>
                 </div>
               </div>
               <div class="cv-sb-bar">
-                <p class="cv-sb-nm">React.js</p>
+                <p class="cv-sb-nm">CSS</p>
+                <div class="cv-sb-bg">
+                  <div class="cv-sb-fl" data-width="60"></div>
+                </div>
+              </div>
+              <div class="cv-sb-bar">
+                <p class="cv-sb-nm">IoT</p>
+                <div class="cv-sb-bg">
+                  <div class="cv-sb-fl" data-width="88"></div>
+                </div>
+              </div>
+              <div class="cv-sb-bar">
+                <p class="cv-sb-nm">Jaringan</p>
                 <div class="cv-sb-bg">
                   <div class="cv-sb-fl" data-width="58"></div>
                 </div>
               </div>
               <div class="cv-sb-bar">
-                <p class="cv-sb-nm">PHP &amp; MySQL</p>
+                <p class="cv-sb-nm">UI/UX</p>
                 <div class="cv-sb-bg">
-                  <div class="cv-sb-fl" data-width="55"></div>
+                  <div class="cv-sb-fl" data-width="69"></div>
                 </div>
               </div>
             </div>
@@ -750,26 +1082,30 @@
             <div class="cv-sec">
               <p class="cv-sec-t">Pendidikan</p>
               <div class="cv-ex">
-                <p class="cv-ex-yr">2021 — Sekarang</p>
-                <h4 class="cv-ex-t">SMK Lorem Ipsum Teknologi</h4>
-                <p class="cv-ex-org">Rekayasa Perangkat Lunak (RPL)</p>
+                <p class="cv-ex-yr">2024 — Sekarang</p>
+                <h4 class="cv-ex-t">SMK Negeri 7 Semarang</h4>
+                <p class="cv-ex-org">Sistem Informasi Jaringan dan Aplikasi (SIJA)</p>
                 <p class="cv-ex-d">
-                  Belajar pemrograman web, mobile, dan desain antarmuka. GPA
-                  88/100.
+                  Belajar pemrograman web, jaringan, cyber, dan desain antarmuka. 
                 </p>
               </div>
               <div class="cv-ex">
-                <p class="cv-ex-yr">2018 — 2021</p>
-                <h4 class="cv-ex-t">SMP Negeri Lorem</h4>
+                <p class="cv-ex-yr">2021 — 2024</p>
+                <h4 class="cv-ex-t">SMP Negeri 27 Semarang</h4>
                 <p class="cv-ex-org">Lulus dengan predikat Baik</p>
+              </div>
+              <div class="cv-ex">
+                <p class="cv-ex-yr">2015 — 2021</p>
+                <h4 class="cv-ex-t">SD Negeri Srondol Kulon 02</h4>
+                <p class="cv-ex-org">Lulus dengan nilai memuaskan</p>
               </div>
             </div>
             <div class="cv-sec">
-              <p class="cv-sec-t">Pengalaman & Organisasi</p>
+              <p class="cv-sec-t">Pengalaman/karya</p>
               <div class="cv-ex">
-                <p class="cv-ex-yr">2024 — 3 Bulan PKL</p>
-                <h4 class="cv-ex-t">CV Lorem Ipsum Digital</h4>
-                <p class="cv-ex-org">Web Developer Intern</p>
+                <p class="cv-ex-yr">Maath Competition</p>
+                <h4 class="cv-ex-t">Math City Map</h4>
+                <p class="cv-ex-org">Ce</p>
                 <p class="cv-ex-d">
                   Front-end website klien menggunakan HTML, CSS, JavaScript.
                   Kolaborasi tim via Git.
@@ -805,8 +1141,8 @@
     </section>
 
     <footer>
-      <p class="ft-name">Lorem Ipsum — Personal Branding</p>
-      <p class="ft-copy">© 2025 All rights reserved</p>
+      <p class="ft-name">OKAN SANDI KURNIAWAN — Personal Branding</p>
+      <p class="ft-copy">© 2026 All rights reserved</p>
     </footer>
 
     <script src="script.js"></script>

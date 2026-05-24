@@ -283,11 +283,11 @@ document.addEventListener("keydown", (e) => {
 
 /* ─── ANIMATED SKILLS CARDS ─── */
 const skillsData = [
-  { label: "Figma", pct: 90 },
-  { label: "HTML/CSS", pct: 88 },
-  { label: "JavaScript", pct: 80 },
-  { label: "React", pct: 75 },
-  { label: "UI Design", pct: 95 },
+  { label: "HTML", pct: 80 },
+  { label: "CSS", pct: 60 },
+  { label: "IoT", pct: 88 },
+  { label: "Jaringan", pct: 58 },
+  { label: "UI/UX", pct: 69 },
 ];
 
 const grid = document.getElementById("cardsGrid");
@@ -343,7 +343,7 @@ if (grid) {
 const orbitSkills = [
   {
     name: "UI/UX Design",
-    pct: 90,
+    pct: 65,
     cat: "Hard Skill",
     r: 80,
     angle: 0,
@@ -367,7 +367,7 @@ const orbitSkills = [
   },
   {
     name: "Teamwork",
-    pct: 58,
+    pct: 88,
     cat: "Soft Skill",
     r: 140,
     angle: 30,
@@ -375,7 +375,7 @@ const orbitSkills = [
   },
   {
     name: "Team Discussion",
-    pct: 55,
+    pct: 90,
     cat: "Soft Skill",
     r: 140,
     angle: 102,
