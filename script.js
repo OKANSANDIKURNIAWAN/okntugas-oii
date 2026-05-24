@@ -138,6 +138,10 @@ const pfData = [
     tags: ["ESP 32", "Arduino Ide", "DHT 22", "RFID"],
     year: "2025",
     type: "IoT",
+    image: "foto/Smart Building & Smart Parking.jpg",
+    liveLink:
+      "https://drive.google.com/file/d/19zzqwoYsCZTmLTWEJPtUQeTdeHymok2_/view?usp=sharing",
+    githubLink: null,
   },
   {
     cat: "Web UI/UX Design",
@@ -147,6 +151,9 @@ const pfData = [
     tags: ["Figma", "CSS", "VS Code", "HTML"],
     year: "2025",
     type: "Design Web",
+    image: "foto/web.png",
+    liveLink: "https://webfilm-gules.vercel.app/index.html",
+    githubLink: "https://github.com/OKANSANDIKURNIAWAN/okn-webpp.git",
   },
   {
     cat: "Cisco Certified Course",
@@ -156,6 +163,10 @@ const pfData = [
     tags: ["Cisco", "Networking"],
     year: "2023",
     type: "Networking",
+    image: "foto/Screenshot 2026-05-16 195636.png",
+    liveLink:
+      "https://drive.google.com/file/d/1xaFpqre-_V5UHETEpS8jbRDcPdun259v/view?usp=sharing",
+    githubLink: null,
   },
   {
     cat: "Math Competition",
@@ -170,6 +181,9 @@ const pfData = [
     ],
     year: "2024",
     type: "Certificate",
+    image: "foto/sertifikat mcm.jpeg",
+    liveLink: null,
+    githubLink: null,
   },
   {
     cat: "Educaation Program",
@@ -183,24 +197,33 @@ const pfData = [
     ],
     year: "2024",
     type: "Certficate",
+    image: "foto/solve education.jpeg",
+    liveLink: null,
+    githubLink: null,
   },
   {
     cat: "Coding Workshop",
-    title: "Hoour of Code Minecraft",
+    title: "Hour of Code Minecraft",
     emoji: "🏫",
     desc: "Program pendidikan digital yang fokus pada pengembangan skill Pemograman melalui platform Hour of Code. ",
-    tags: ["HTML", "CSS", "JavaScript", "GSAP"],
+    tags: ["Algoritma"],
     year: "2026",
     type: "Certificate",
+    image: "foto/minecraft.jpg",
+    liveLink: null,
+    githubLink: null,
   },
   {
     cat: "Coding Workshop",
-    title: "Hoour of Code Music",
+    title: "Hour of Code Music",
     emoji: "🏫",
     desc: "Program pendidikan digital yang fokus pada pengembangan skill Pemograman melalui platform Hour of Code. ",
-    tags: ["HTML", "CSS", "JavaScript", "GSAP"],
+    tags: ["Algoritma"],
     year: "2026",
     type: "Certificate",
+    image: "foto/music.jpg",
+    liveLink: null,
+    githubLink: null,
   },
 ];
 const total = pfData.length;
@@ -259,7 +282,7 @@ document.addEventListener("mouseup", (e) => {
 function openModal(idx) {
   const d = pfData[idx];
   document.getElementById("mThumb").innerHTML =
-    `<span style="font-size:80px">${d.emoji}</span>`;
+    `<img src="${d.image}" alt="${d.title}" style="width: 100%; height: 100%; object-fit: cover;">`;
   document.getElementById("mCat").textContent = d.cat;
   document.getElementById("mTitle").textContent = d.title;
   document.getElementById("mDesc").textContent = d.desc;
@@ -268,8 +291,16 @@ function openModal(idx) {
   document.getElementById("mTags").innerHTML = d.tags
     .map((t) => `<span class="ptag">${t}</span>`)
     .join("");
-  document.getElementById("mLinks").innerHTML =
-    `<a href="#" class="ml pri">🔗 Lihat Live</a><a href="#" class="ml sec">⊞ GitHub</a>`;
+
+  let linksHTML = "";
+  if (d.liveLink) {
+    linksHTML += `<a href="${d.liveLink}" class="ml pri" target="_blank">🔗 Lihat Live</a>`;
+  }
+  if (d.githubLink) {
+    linksHTML += `<a href="${d.githubLink}" class="ml sec" target="_blank">⊞ GitHub</a>`;
+  }
+  document.getElementById("mLinks").innerHTML = linksHTML;
+
   document.getElementById("modal").classList.add("open");
   document.body.style.overflow = "hidden";
 }

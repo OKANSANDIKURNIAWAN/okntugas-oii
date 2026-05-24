@@ -327,28 +327,28 @@ section {
 .hero-photo-bg {
   width: 100%;
   height: 100%;
-  background: #141414;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 .photo-frame {
-  width: 280px;
-  height: 360px;
+  width: 380px;
+  height: 480px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #111;
-  border: 1px solid var(--g600);
+  background: #ffffff;
+  border: none;
 }
 .photo-frame::before {
   content: "";
   position: absolute;
   inset: -8px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: none;
 }
 .photo-frame img {
   width: 100%;
@@ -357,12 +357,12 @@ section {
   display: block;
 }
 .photo-frame .photo-ph {
-  font-size: 90px;
-  opacity: 0.1;
+  font-size: 120px;
+  opacity: 1;
 }
 .photo-label {
   position: absolute;
-  bottom: 32px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   font-family: "DM Mono", monospace;
@@ -487,7 +487,7 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 64px;
-  opacity: 0.2;
+  opacity: 1;
   overflow: hidden;
   position: relative;
 }
@@ -538,7 +538,7 @@ section {
   font-family: "Archivo", sans-serif;
   font-size: 14px;
   line-height: 1.9;
-  color: var(--g200);
+  color: var(--white);
   margin-bottom: 24px;
 }
 .info-title {
@@ -546,7 +546,7 @@ section {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--g400);
+  color: var(--g200);
   margin-bottom: 14px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--g800);
@@ -1207,7 +1207,8 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 80px;
-  opacity: 0.1;
+  opacity: 1;
+  overflow: hidden;
 }
 .modal-content {
   padding: 32px;
@@ -1348,7 +1349,7 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 36px;
-  opacity: 0.3;
+  opacity: 1;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -1539,12 +1540,37 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 .ft-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 18px;
   font-weight: 300;
   color: var(--g400);
+  flex: 1;
+}
+.ft-links {
+  display: flex;
+  gap: 20px;
+  flex: 0 0 auto;
+}
+.ft-link {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--g400);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 0.5px solid var(--g600);
+  border-radius: 16px;
+  transition:
+    border-color 0.25s,
+    color 0.25s;
+}
+.ft-link:hover {
+  border-color: var(--white);
+  color: var(--white);
 }
 .ft-copy {
   font-family: "DM Mono", monospace;
@@ -1552,6 +1578,8 @@ footer {
   letter-spacing: 2px;
   color: var(--g600);
   text-transform: uppercase;
+  flex: 1;
+  text-align: right;
 }
 
 /* ─── UTILS ─── */
