@@ -2035,51 +2035,51 @@ body::after {
   .topnav {
     padding: 0 16px;
   }
-  
+
   .tn-logo {
     font-size: 16px;
   }
-  
+
   section {
     padding: 60px 16px;
   }
-  
+
   .sec-title {
     font-size: clamp(28px, 4vw, 48px);
     margin-bottom: 40px;
   }
-  
+
   .hero-left {
     padding: 0 16px 60px;
   }
-  
+
   .hero-name {
     font-size: clamp(48px, 6vw, 80px);
   }
-  
+
   .hero-nick {
     font-size: clamp(16px, 2vw, 22px);
     margin-bottom: 24px;
   }
-  
+
   .hero-desc {
     font-size: 12px;
     max-width: 100%;
   }
-  
+
   .skill-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .profil-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
+
   .pf-card {
     flex: 0 0 100%;
   }
@@ -2090,527 +2090,527 @@ body::after {
   :root {
     --nav: 50px;
   }
-  
+
   body {
     cursor: auto;
   }
-  
+
   /* Disable custom cursor on mobile */
   .cur,
   .cuf {
     display: none;
   }
-  
+
   .topnav {
     padding: 0 12px;
     height: 50px;
   }
-  
+
   .tn-logo {
     font-size: 14px;
     letter-spacing: 1px;
   }
-  
+
   .tn-link {
     padding: 6px 8px;
     font-size: 8px;
   }
-  
+
   .tn-theme {
     width: 32px;
     height: 32px;
     margin-left: 10px;
     font-size: 13px;
   }
-  
+
   section {
     padding: 48px 12px;
   }
-  
+
   .sec-label {
     font-size: 8px;
     letter-spacing: 2px;
     margin-bottom: 10px;
   }
-  
+
   .sec-title {
     font-size: clamp(24px, 5vw, 36px);
     margin-bottom: 30px;
   }
-  
+
   /* HERO */
   #home {
     min-height: 500px;
   }
-  
+
   .hero-left {
     padding: 0 12px 40px;
     justify-content: center;
   }
-  
+
   .hero-eyebrow {
     font-size: 8px;
     letter-spacing: 2px;
     margin-bottom: 16px;
   }
-  
+
   .hero-name {
     font-size: clamp(36px, 7vw, 56px);
     margin-bottom: 8px;
   }
-  
+
   .hero-nick {
     font-size: clamp(14px, 2vw, 18px);
     margin-bottom: 16px;
   }
-  
+
   .hero-desc {
     font-size: 11px;
     line-height: 1.7;
     max-width: 100%;
     margin-bottom: 16px;
   }
-  
+
   .hero-tags {
     gap: 6px;
   }
-  
+
   .htag {
     font-size: 8px;
     padding: 4px 10px;
   }
-  
+
   .hero-num {
     font-size: 120px;
   }
-  
+
   .hero-scroll {
     bottom: 20px;
   }
-  
+
   .scroll-line {
     height: 30px;
   }
-  
+
   /* ABOUT SECTION */
   .acc-tabs {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
-  
+
   .acc-tab {
     padding: 16px 12px;
     font-size: 9px;
   }
-  
+
   .profil-grid {
     gap: 16px;
   }
-  
+
   .profil-photo {
     font-size: 48px;
   }
-  
+
   .profil-bio {
     font-size: 12px;
   }
-  
+
   .info-row {
     font-size: 12px;
     padding: 8px 0;
   }
-  
+
   .skill-pill {
     font-size: 9px;
     padding: 6px 12px;
   }
-  
+
   /* EDUCATION */
   .edu-items {
     gap: 20px;
   }
-  
+
   .edu-school {
     font-size: 18px;
   }
-  
+
   .edu-jurusan {
     font-size: 11px;
   }
-  
+
   .edu-desc {
     font-size: 11px;
     max-width: 100%;
   }
-  
+
   .edu-tag {
     font-size: 7px;
     padding: 2px 6px;
   }
-  
+
   /* HOBI */
   .hobi-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
+
   .hacc-title {
     font-size: 16px;
   }
-  
+
   .hacc-icon {
     font-size: 14px;
   }
-  
+
   .hacc-inner {
     font-size: 12px;
   }
-  
+
   /* KARIER */
   .karier-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .k-card {
     padding: 20px;
   }
-  
+
   .k-num {
     font-size: 32px;
   }
-  
+
   .k-title {
     font-size: 16px;
   }
-  
+
   .k-desc {
     font-size: 11px;
   }
-  
+
   /* SKILLS */
   .skills-intro {
     font-size: 12px;
     max-width: 100%;
   }
-  
+
   .skill-cards-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
-  
+
   .skill-card {
     padding: 16px 12px 12px;
     min-height: 140px;
   }
-  
+
   .sk-icon-wrap {
     width: 56px;
     height: 56px;
     font-size: 22px;
     margin-bottom: 12px;
   }
-  
+
   .sk-pill-outer {
     height: 100px;
     margin-bottom: 12px;
   }
-  
+
   .sk-pill-bg {
     width: 60px;
     height: 100px;
   }
-  
+
   .sk-pct-text {
     font-size: 18px;
     bottom: 10px;
   }
-  
+
   .sk-name-text {
     font-size: 9px;
   }
-  
+
   .skill-bars-row {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .sk-bar-name {
     font-size: 12px;
   }
-  
+
   /* PORTFOLIO */
   .pf-outer {
     cursor: auto;
   }
-  
+
   .pf-track {
     gap: 12px;
   }
-  
+
   .pf-card {
     flex: 0 0 100%;
   }
-  
+
   .pf-emoji {
     font-size: 40px;
   }
-  
+
   .pf-card-title {
     font-size: 18px;
   }
-  
+
   .pf-body {
     padding: 12px;
   }
-  
+
   .pf-desc {
     font-size: 11px;
   }
-  
+
   .ptag {
     font-size: 7px;
     padding: 2px 6px;
   }
-  
+
   .pf-btn {
     font-size: 8px;
     padding: 6px 12px;
   }
-  
+
   .pf-arrow {
     width: 36px;
     height: 36px;
     font-size: 14px;
   }
-  
+
   .pfdot {
     width: 12px;
   }
-  
+
   .pfdot.active {
     width: 20px;
   }
-  
+
   /* MODAL */
   .modal {
     padding: 16px;
   }
-  
+
   .modal-box {
     max-height: 90vh;
   }
-  
+
   .modal-content {
     padding: 16px;
   }
-  
+
   .modal-title {
     font-size: 24px;
   }
-  
+
   .modal-desc {
     font-size: 12px;
   }
-  
+
   .modal-info {
     grid-template-columns: 1fr;
     gap: 8px;
   }
-  
+
   .mi-lbl {
     font-size: 8px;
   }
-  
+
   .mi-val {
     font-size: 12px;
   }
-  
+
   .modal-close {
     width: 30px;
     height: 30px;
     font-size: 14px;
   }
-  
+
   /* CV */
   .cv-wrap {
     border: none;
   }
-  
+
   .cv-hd {
     padding: 16px;
     gap: 16px;
   }
-  
+
   .cv-photo {
     width: 70px;
     height: 90px;
   }
-  
+
   .cv-nm {
     font-size: 24px;
   }
-  
+
   .cv-role {
     font-size: 8px;
   }
-  
+
   .cv-ct {
     font-size: 9px;
   }
-  
+
   .cv-sb {
     padding: 16px;
   }
-  
+
   .cv-main {
     padding: 16px;
   }
-  
+
   .cv-sec {
     margin-bottom: 16px;
   }
-  
+
   .cv-sec-t {
     font-size: 8px;
   }
-  
+
   .cv-ir {
     font-size: 11px;
   }
-  
+
   .cv-ex-t {
     font-size: 16px;
   }
-  
+
   .cv-qt blockquote {
     font-size: 14px;
   }
-  
+
   .cv-dl {
     font-size: 8px;
     padding: 10px 20px;
   }
-  
+
   /* FOOTER */
   footer {
     padding: 24px 12px;
     flex-direction: column;
     gap: 12px;
   }
-  
+
   .ft-name {
     font-size: 14px;
   }
-  
+
   .ft-links {
     gap: 10px;
   }
-  
+
   .ft-link {
     font-size: 9px;
     padding: 5px 10px;
   }
-  
+
   .ft-copy {
     font-size: 8px;
   }
-  
+
   /* ORBIT */
   .orbit-wrap {
     min-height: 320px;
     gap: 1.5rem;
   }
-  
+
   .orbit-scene {
     width: 240px;
     height: 240px;
   }
-  
+
   .ring1 {
     width: 80px !important;
     height: 80px !important;
   }
-  
+
   .ring2 {
     width: 140px !important;
     height: 140px !important;
   }
-  
+
   .ring3 {
     width: 200px !important;
     height: 200px !important;
   }
-  
+
   .orbit-center {
     width: 60px !important;
     height: 60px !important;
   }
-  
+
   .orbit-center-num {
     font-size: 16px !important;
   }
-  
+
   .orbit-center-lbl {
     font-size: 9px !important;
   }
-  
+
   .orbit-tag {
     font-size: 10px !important;
     padding: 3px 8px !important;
   }
-  
+
   .info-panel {
     width: 100%;
   }
-  
+
   .info-title {
     font-size: 14px;
   }
-  
+
   .info-pct {
     font-size: 22px;
   }
-  
+
   .info-desc {
     font-size: 12px;
   }
-  
+
   .pause-btn {
     font-size: 11px;
     padding: 4px 10px;
   }
-  
+
   /* ANIMATED SKILLS */
   .skills-title {
     font-size: 18px;
   }
-  
+
   .skills-badge {
     font-size: 11px;
     padding: 6px 12px;
   }
-  
+
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-  
+
   .card-fill {
     border-radius: 80px 80px 14px 14px;
   }
-  
+
   .icon-circle {
     width: 40px;
     height: 40px;
     margin-top: 0.6rem;
     font-size: 16px;
   }
-  
+
   .card-pct {
     font-size: 18px;
   }
-  
+
   .card-label {
     font-size: 10px;
   }
