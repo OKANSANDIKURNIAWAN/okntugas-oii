@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Ipsum — Web Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Archivo:wght@100;200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cur" id="cur"></div>
+    <div class="cuf" id="cuf"></div>
+
+    <!-- ══ TOP NAVBAR ══ -->
+    <header class="topnav">
+      <a href="#home" class="tn-logo">LI.</a>
+      <nav>
+        <ul class="tn-links">
+          <li>
+            <a href="#home" class="tn-link active" data-sec="home">Beranda</a>
+          </li>
+          <li>
+            <a href="#about" class="tn-link" data-sec="about">About Me</a>
+          </li>
+          <li>
+            <a href="#skills" class="tn-link" data-sec="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="tn-link" data-sec="portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li><a href="#cv" class="tn-link" data-sec="cv">CV</a></li>
+        </ul>
+      </nav>
+      <button class="tn-theme" id="themeBtn" title="Toggle Theme">◑</button>
+    </header>
+
+    <!-- ══ HERO ══ -->
+    <section id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-left">
+        <p class="hero-eyebrow">01 — Beranda</p>
+        <h1 class="hero-name">
+          <span>Okan</span>
+          <span>Sandi Kurniawan</span>
+        </h1>
+        <p class="hero-nick"><span>"Okan"</span></p>
+        <p class="hero-desc">
+          Hi, saya Okan Sandi Kurniawan. Saya merupakan siswa jurusan Sistem
+          Informasi Jaringan dan Aplikasi (SIJA) di SMK Negeri 7 Semarang yang
+          memiliki minat pada web development, UI/UX design, dan Internet of
+          Things.
+        </p>
+        <div class="hero-tags">
+          <span class="htag">Creative Developer Web</span>
+          <span class="htag">UI/UX</span>
+          <span class="htag">IoT</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-bg">
+            <div class="photo-frame">
+              <!-- Ganti dengan <img src="foto.jpg" alt="Foto"> -->
+              <span class="photo-ph">🧑‍💻</span>
+            </div>
+            <p class="photo-label">Foto Kamu Di Sini</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span class="scroll-lbl">Scroll</span>
+      </div>
+      <div class="hero-num">25</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══ ABOUT ME ══ -->
+    <section id="about">
+      <p class="sec-label">// 02</p>
+      <h2 class="sec-title">About Me</h2>
+
+      <div class="acc-tabs">
+        <button class="acc-tab active" onclick="switchPanel('profil', this)">
+          Profil
+        </button>
+        <button class="acc-tab" onclick="switchPanel('pendidikan', this)">
+          Pendidikan
+        </button>
+        <button class="acc-tab" onclick="switchPanel('hobi', this)">
+          Hobi & Minat
+        </button>
+        <button class="acc-tab" onclick="switchPanel('karier', this)">
+          Karier
+        </button>
+        <button class="acc-tab" onclick="switchPanel('skills-about', this)">
+          Keahlian
+        </button>
+      </div>
+
+      <!-- PROFIL -->
+      <div class="acc-panel active" id="panel-profil">
+        <div class="profil-grid">
+          <div class="reveal">
+            <div class="profil-photo">
+              <!-- <img src="foto.jpg" alt="Foto"> -->
+              <span>👤</span>
+            </div>
+            <div class="profil-stats">
+              <div class="pstat">
+                <span class="pstat-n">3+</span
+                ><span class="pstat-l">Proyek</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-n">2</span><span class="pstat-l">Tahun</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-n">5</span><span class="pstat-l">Skill</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-n">∞</span
+                ><span class="pstat-l">Semangat</span>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay: 0.15s">
+            <p class="profil-bio">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation.
+            </p>
+            <p class="profil-bio">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Saya sangat percaya bahwa
+              karya terbaik lahir dari kolaborasi dan rasa ingin tahu.
+            </p>
+            <div style="margin-top: 24px">
+              <p class="info-title">Riwayat Keluarga</p>
+              <div class="info-row">
+                <span>Ayah</span><span>Lorem Ipsum Pater — Wirausahawan</span>
+              </div>
+              <div class="info-row">
+                <span>Ibu</span
+                ><span>Lorem Ipsum Mater — Ibu Rumah Tangga</span>
+              </div>
+              <div class="info-row">
+                <span>Anak ke-</span><span>2 dari 3 bersaudara</span>
+              </div>
+              <div class="info-row">
+                <span>Domisili</span><span>Kota Lorem, Provinsi Ipsum</span>
+              </div>
+              <div class="info-row">
+                <span>TTL</span><span>Lorem, 01 Januari 2006</span>
+              </div>
+              <div class="info-row"><span>Agama</span><span>Islam</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PENDIDIKAN — Wave Timeline -->
+      <div class="acc-panel" id="panel-pendidikan">
+        <div class="edu-wave-section reveal">
+          <div class="edu-items">
+            <div
+              class="edu-item"
+              id="edu1"
+              style="align-self: start; padding-top: 20px"
+            >
+              <div class="edu-dot-label">
+                <span class="edu-cal">📅</span>
+                <span class="edu-date">2024 — Sekarang</span>
+              </div>
+              <span class="edu-tag current">Active</span>
+              <h3 class="edu-school">SMK Negeri 7 Semarang</h3>
+              <p class="edu-jurusan">Sistem Informasi Jaringan & Aplikasi</p>
+              <p class="edu-desc">
+                Mempelajari pemrograman web, desain antarmuka, cyber security,
+                dan IoT.
+              </p>
+            </div>
+            <div class="edu-item" id="edu2" style="align-self: center">
+              <div class="edu-dot-label">
+                <span class="edu-cal">📅</span>
+                <span class="edu-date">2021 — 2024</span>
+              </div>
+              <span class="edu-tag">Lulus</span>
+              <h3 class="edu-school">SMP Negeri 27 Semarang</h3>
+              <p class="edu-jurusan">Lulus dengan predikat Baik</p>
+              <p class="edu-desc">
+                Peringkat 1 selama tiga semester. Aktif dalam mengikuti lomba
+                matematika dan bahasa inggris.
+              </p>
+            </div>
+            <div
+              class="edu-item"
+              id="edu3"
+              style="align-self: end; padding-bottom: 40px"
+            >
+              <div class="edu-dot-label">
+                <span class="edu-cal">📅</span>
+                <span class="edu-date">2016 — 2021</span>
+              </div>
+              <span class="edu-tag">Lulus</span>
+              <h3 class="edu-school">SD Negeri Srondol Kulon 02</h3>
+              <p class="edu-jurusan">Lulus dengan nilai memuaskan</p>
+              <p class="edu-desc">
+                Masa pembentukan karakter. Aktif dalam mengikuti lomba OSN IPA.
+              </p>
+            </div>
+          </div>
+          <!-- SVG Wave Line -->
+          <svg
+            class="edu-wave-svg"
+            viewBox="0 0 1200 140"
+            preserveAspectRatio="none"
+            height="140"
+            style="
+              position: absolute;
+              bottom: 30px;
+              left: 0;
+              right: 0;
+              width: 100%;
+            "
+          >
+            <path
+              id="wavePath"
+              d="M 60 110 C 200 110 250 50 400 70 C 550 90 600 30 750 50 C 900 70 950 20 1140 20"
+              fill="none"
+              stroke="#444240"
+              stroke-width="1.5"
+              stroke-dasharray="8 6"
+            />
+            <circle
+              cx="400"
+              cy="70"
+              r="7"
+              fill="#0a0a0a"
+              stroke="#888785"
+              stroke-width="1.5"
+            />
+            <circle
+              cx="750"
+              cy="50"
+              r="7"
+              fill="#0a0a0a"
+              stroke="#888785"
+              stroke-width="1.5"
+            />
+            <circle
+              cx="1140"
+              cy="20"
+              r="7"
+              fill="#f5f4f0"
+              stroke="#f5f4f0"
+              stroke-width="1.5"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- HOBI -->
+      <div class="acc-panel" id="panel-hobi">
+        <div class="hobi-grid">
+          <div class="reveal">
+            <p class="info-title" style="margin-bottom: 16px">Hobi</p>
+            <div class="hacc-item open">
+              <div class="hacc-hd" onclick="toggleHobi(this)">
+                <span class="hacc-title"
+                  ><span class="hacc-icon">🖥️</span> Mambaca Buku</span
+                >
+                <span class="hacc-plus">+</span>
+              </div>
+              <div class="hacc-body" style="max-height: 150px">
+                <div class="hacc-inner">
+                  Membuat proyek web mini sebagai sarana berlatih dan eksplorasi
+                  teknologi baru. Dari landing page sederhana hingga aplikasi
+                  web interaktif — setiap proyek adalah petualangan baru.
+                </div>
+              </div>
+            </div>
+            <div class="hacc-item">
+              <div class="hacc-hd" onclick="toggleHobi(this)">
+                <span class="hacc-title"
+                  ><span class="hacc-icon">🎨</span> Mendengarkan Musik</span
+                >
+                <span class="hacc-plus">+</span>
+              </div>
+              <div class="hacc-body">
+                <div class="hacc-inner">
+                  Mendesain UI Mockup dengan Figma dan Adobe XD. Suka
+                  mengeksplorasi tren desain terbaru dan menerapkannya ke dalam
+                  konsep antarmuka yang segar dan fungsional.
+                </div>
+              </div>
+            </div>
+            <div class="hacc-item">
+              <div class="hacc-hd" onclick="toggleHobi(this)">
+                <span class="hacc-title"
+                  ><span class="hacc-icon">📸</span> Fashion Interest</span
+                >
+                <span class="hacc-plus">+</span>
+              </div>
+              <div class="hacc-body">
+                <div class="hacc-inner">
+                  Fotografi street dan urban — menangkap momen kehidupan
+                  sehari-hari dari sudut pandang berbeda. Kamera adalah cara
+                  lain untuk bercerita.
+                </div>
+              </div>
+            </div>
+            <div class="hacc-item">
+              <div class="hacc-hd" onclick="toggleHobi(this)">
+                <span class="hacc-title"
+                  ><span class="hacc-icon">🎮</span> Menjelajah</span
+                >
+                <span class="hacc-plus">+</span>
+              </div>
+              <div class="hacc-body">
+                <div class="hacc-inner">
+                  Bermain game strategi dan RPG sebagai hiburan sekaligus sarana
+                  melatih kemampuan berpikir analitis dan problem solving.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay: 0.15s">
+            <p class="info-title" style="margin-bottom: 16px">Minat</p>
+            <div class="hacc-item open">
+              <div class="hacc-hd" onclick="toggleHobi(this)">
+                <span class="hacc-title"
+                  ><span class="hacc-icon">✦</span> Web Development & UI/UX
+                  Design</span
+                >
+                <span class="hacc-plus">+</span>
+              </div>
+              <div class="hacc-body" style="max-height: 150px">
+                <div class="hacc-inner">
+                  Minat saya berada di bidang teknologi, terutama Internet of
+                  Things (IoT), pengembangan web, dan desain UI/UX. Saya
+                  tertarik menciptakan produk digital yang tidak hanya
+                  fungsional, tetapi juga nyaman digunakan dan memiliki
+                  pengalaman visual yang baik.
+                </div>
+              </div>
+            </div>
+            <div class="hacc-item">
+              <div class="hacc-hd" onclick="toggleHobi(this)">
+                <span class="hacc-title"
+                  ><span class="hacc-icon">⚡</span> IoT</span
+                >
+                <span class="hacc-plus">+</span>
+              </div>
+              <div class="hacc-body">
+                <div class="hacc-inner">
+                  Passion dalam membangun antarmuka web yang hidup, responsif,
+                  dan berperforma tinggi. Terus mengikuti perkembangan ekosistem
+                  JavaScript modern.
+                </div>
+              </div>
+            </div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KARIER -->
+      <div class="acc-panel" id="panel-karier">
+        <div class="karier-grid">
+          <div class="k-card reveal">
+            <div class="k-num">01</div>
+            <h3 class="k-title">Aspiring Web Developer </h3>
+            <p class="k-desc">
+              Saya ingin menjadi web developer yang mampu membangun website
+               modern dengan pengalaman pengguna yang baik, tampilan yang menarik,
+                dan fungsi yang efektif. Saya juga terus mengembangkan kemampuan di bidang
+                 web development dan UI/UX design untuk menciptakan solusi digital yang bermanfaat.
+
+            </p>
+          </div>
+          <div class="k-card reveal" style="transition-delay: 0.1s">
+            <div class="k-num">02</div>
+            <h3 class="k-title">Diponegoro University (UNDIP) - Informatics </h3>
+            <p class="k-desc">
+             Ke depannya, saya berencana melanjutkan studi di Universitas Diponegoro dengan jurusan
+              Teknik Informatika guna memperdalam pemahaman di bidang teknologi dan mendukung tujuan
+               saya menjadi seorang web developer.
+
+            </p>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <!-- KEAHLIAN — Orbital Skills -->
+      <div class="acc-panel" id="panel-skills-about">
+        <h3 class="sr-only" style="position: absolute; left: -9999px">
+          Skill orbit — klik tag untuk detail skill
+        </h3>
+
+        <div class="orbit-wrap">
+          <div class="orbit-scene" id="scene">
+            <div class="orbit-ring ring1"></div>
+            <div class="orbit-ring ring2"></div>
+            <div class="orbit-ring ring3"></div>
+            <div class="orbit-center">
+              <span class="orbit-center-num">6+</span>
+              <span class="orbit-center-lbl">My skills</span>
+            </div>
+            <div class="orbit-group" id="orbitGroup"></div>
+          </div>
+          <div class="info-panel" id="infoPanel">
+            <p class="info-cat" id="iCat">Klik tag skill</p>
+            <p class="info-title" id="iTitle">—</p>
+            <p class="info-pct" id="iPct"></p>
+            <div class="info-bar-bg">
+              <div class="info-bar-fill" id="iBar" style="width: 0%"></div>
+            </div>
+            <p class="info-desc" id="iDesc">
+              Pilih salah satu skill untuk melihat detail kemampuan.
+            </p>
+            <button class="pause-btn" id="pauseBtn">⏸ Pause</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══ SKILLS (Animated Cards) ══ -->
+    <section id="skills">
+      <p class="sec-label">// 03</p>
+      <div class="skills-wrapper">
+        <div class="skills-header">
+          <div class="skills-badge">
+            <span class="dot"></span>
+            My Skills
+          </div>
+          <h2 class="skills-title">Tools &amp; Skills</h2>
+        </div>
+        <div class="cards-grid" id="cardsGrid"></div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══ PORTFOLIO ══ -->
+    <section id="portfolio">
+      <p class="sec-label">// 04</p>
+      <h2 class="sec-title">Portofolio</h2>
+      <div class="pf-outer" id="pfOuter">
+        <div class="pf-track" id="pfTrack">
+          <div class="pf-card">
+            <div
+              class="pf-thumb"
+              style="background: linear-gradient(135deg, #111, #1c1c1c)"
+            >
+              <div class="pf-emoji">🌐</div>
+              <div class="pf-overlay"></div>
+              <div class="pf-meta">
+                <p class="pf-cat">IoT Project</p>
+                <h3 class="pf-card-title">Smart Building & Parking System</h3>
+              </div>
+            </div>
+            <div class="pf-body">
+              <p class="pf-desc">
+                Project miniatur smart building berbasis IoT yang digunakan untuk simulasi monitoring parkir dan kontrol perangkat otomatis menggunakan ESP32 dan sensor.
+              </p>
+              <div class="pf-tags">
+                <span class="ptag">ESP 32</span><span class="ptag">Arduino Ide</span
+                ><span class="ptag">RFID</span>
+              </div>
+              <button class="pf-btn" onclick="openModal(0)">
+                Detail Proyek →
+              </button>
+            </div>
+          </div>
+          <div class="pf-card">
+            <div
+              class="pf-thumb"
+              style="background: linear-gradient(135deg, #111, #181818)"
+            >
+              <div class="pf-emoji">🎨</div>
+              <div class="pf-overlay"></div>
+              <div class="pf-meta">
+                <p class="pf-cat">Web Static</p>
+                <h3 class="pf-card-title">Web Film & Series</h3>
+              </div>
+            </div>
+            <div class="pf-body">
+              <p class="pf-desc">
+                Platform informasi film dan series Indonesia 2025-2026 dengan desain modern dan responsif
+              </p>
+              <div class="pf-tags">
+                <span class="ptag">Figma</span><span class="ptag">UI/UX</span
+                ><span class="ptag">VS Code</span>
+              </div>
+              <button class="pf-btn" onclick="openModal(1)">
+                Detail Proyek →
+              </button>
+            </div>
+          </div>
+          <div class="pf-card">
+            <div
+              class="pf-thumb"
+              style="background: linear-gradient(135deg, #121212, #1a1a1a)"
+            >
+              <div class="pf-emoji">📱</div>
+              <div class="pf-overlay"></div>
+              <div class="pf-meta">
+                <p class="pf-cat">Netwworking</p>
+                <h3 class="pf-card-title">IT Essential (Cisco)</h3>
+              </div>
+            </div>
+            <div class="pf-body">
+              <p class="pf-desc">
+                Sertifikasi dan pelatihan mendalam mengenai fondasi IT, perakitan hardware, dan dasar-dasar jaringan komputer dari Cisco Networking Academy.
+              </p>
+              <div class="pf-tags">
+                <span class="ptag">Cisco</span
+                ><span class="ptag">Networking</span
+                ><span class="ptag">Certification</span>
+              </div>
+              <button class="pf-btn" onclick="openModal(2)">
+                Detail Proyek →
+              </button>
+            </div>
+          </div>
+          <div class="pf-card">
+            <div
+              class="pf-thumb"
+              style="background: linear-gradient(135deg, #111, #161616)"
+            >
+              <div class="pf-emoji">🛒</div>
+              <div class="pf-overlay"></div>
+              <div class="pf-meta">
+                <p class="pf-cat">Math Competition</p>
+                <h3 class="pf-card-title">Math City Map (MCM)</h3>
+              </div>
+            </div>
+            <div class="pf-body">
+              <p class="pf-desc">
+               Kompetisi matematika berbasis lokasi yang menggabungkan kemampuan analisis matematika dengan penjelajahan lapangan. Lomba ini diadakan di Taman Raden Saleh, sekaligus merayakan hari Pendidikan Nasional.
+              </p>
+              <div class="pf-tags">
+                <span class="ptag">Problem Solving</span><span class="ptag">MCM Apps</span
+                ><span class="ptag">Team Strategy</span>
+              </div>
+              <button class="pf-btn" onclick="openModal(3)">
+                Detail Proyek →
+              </button>
+            </div>
+          </div>
+          <div class="pf-card">
+            <div
+              class="pf-thumb"
+              style="background: linear-gradient(135deg, #0e0e0e, #191919)"
+            >
+              <div class="pf-emoji">📊</div>
+              <div class="pf-overlay"></div>
+              <div class="pf-meta">
+                <p class="pf-cat">Education Program</p>
+                <h3 class="pf-card-title">Solve Education</h3>
+              </div>
+            </div>
+            <div class="pf-body">
+              <p class="pf-desc">
+                Program pendidikan digital yang fokus pada pengembangan skill Bahasa Inggrismelalui platform game-based learning. Saya mendapatkan penghargaan sebagai siswa yang aktif belajar secara konsisten se-Kota Semarang. Selain itu saya juga pernah mendapatkan Juara 1 kategori kelas 8 SMP
+              </p>
+              <div class="pf-tags">
+                <span class="ptag">Learning Participation</span><span class="ptag">Solve Education Platform</span
+                ><span class="ptag">Skill Development</span>
+              </div>
+              <button class="pf-btn" onclick="openModal(4)">
+                Detail Proyek →
+              </button>
+            </div>
+          </div>
+          <div class="pf-card">
+            <div
+              class="pf-thumb"
+              style="background: linear-gradient(135deg, #111, #1b1b1b)"
+            >
+              <div class="pf-emoji">🏫</div>
+              <div class="pf-overlay"></div>
+              <div class="pf-meta">
+                <p class="pf-cat">Coding Workshop</p>
+                <h3 class="pf-card-title">Hour of Code Minecraft</h3>
+              </div>
+            </div>
+            <div class="pf-body">
+              <p class="pf-desc">
+                Landing page platform edukasi modern dengan animasi smooth,
+                responsif penuh, dan konversi tinggi.
+              </p>
+              <div class="pf-tags">
+                <span class="ptag">HTML</span><span class="ptag">CSS</span
+                ><span class="ptag">GSAP</span>
+              </div>
+              <button class="pf-btn" onclick="openModal(5)">
+                Detail Proyek →
+              </button>
+            </div>
+          </div>
+          <div class="pf-card">
+          <div
+              class="pf-thumb"
+              style="background: linear-gradient(135deg, #111, #1b1b1b)"
+            >
+              <div class="pf-emoji">🏫</div>
+              <div class="pf-overlay"></div>
+              <div class="pf-meta">
+                <p class="pf-cat">Coding Workshop</p>
+                <h3 class="pf-card-title">Hour of Code Music</h3>
+              </div>
+            </div>
+            <div class="pf-body">
+              <p class="pf-desc">
+                Landing page platform edukasi modern dengan animasi smooth,
+                responsif penuh, dan konversi tinggi.
+              </p>
+              <div class="pf-tags">
+                <span class="ptag"></span><span class="ptag">CSS</span
+                ><span class="ptag">GSAP</span>
+              </div>
+              <button class="pf-btn" onclick="openModal(5)">
+                Detail Proyek →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pf-controls">
+        <button class="pf-arrow" id="pfPrev" onclick="slidePf(-1)" disabled>
+          ←
+        </button>
+        <button class="pf-arrow" id="pfNext" onclick="slidePf(1)">→</button>
+        <div class="pf-dots" id="pfDots"></div>
+        <span class="pf-ctr" id="pfCtr">01 / 06</span>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-bg" onclick="closeModal()"></div>
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-thumb" id="mThumb"></div>
+        <div class="modal-content">
+          <p class="modal-cat" id="mCat"></p>
+          <h2 class="modal-title" id="mTitle"></h2>
+          <p class="modal-desc" id="mDesc"></p>
+          <div class="modal-info" id="mInfo"></div>
+          <div class="modal-tags" id="mTags"></div>
+          <div class="modal-links" id="mLinks"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ══ CV ══ -->
+    <section id="cv">
+      <p class="sec-label">// 05</p>
+      <h2 class="sec-title">Curriculum Vitae</h2>
+      <div class="cv-wrap reveal">
+        <div class="cv-hd">
+          <div class="cv-photo">👤<!-- <img src="foto.jpg"> --></div>
+          <div>
+            <h2 class="cv-nm">Lorem Ipsum</h2>
+            <p class="cv-role">Web Developer · UI/UX Designer</p>
+            <div class="cv-contacts">
+              <span class="cv-ct"
+                ><span class="cv-ct-ic">✉</span>okansandi65@gmail.com</span
+              >
+              <span class="cv-ct"
+                ><span class="cv-ct-ic">☏</span>+62 895-1330-1989</span
+              >
+              <span class="cv-ct"
+                ><span class="cv-ct-ic">⌂</span>Kota Semarang, Indonesia</span
+              >
+              <span class="cv-ct"
+                ><span class="cv-ct-ic">⊞</span>github.com/loremipsum</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="cv-bd">
+          <div class="cv-sb">
+            <div class="cv-sec">
+              <p class="cv-sec-t">Data Pribadi</p>
+              <div class="cv-ir">
+                <span>Nama</span><strong>Lorem Ipsum</strong>
+              </div>
+              <div class="cv-ir">
+                <span>Panggilan</span><strong>Lori</strong>
+              </div>
+              <div class="cv-ir">
+                <span>TTL</span><strong>Lorem, 01 Jan 2006</strong>
+              </div>
+              <div class="cv-ir"><span>Agama</span><strong>Islam</strong></div>
+              <div class="cv-ir">
+                <span>Status</span><strong>Pelajar</strong>
+              </div>
+            </div>
+            <div class="cv-sec">
+              <p class="cv-sec-t">Keahlian</p>
+              <div class="cv-sb-bar">
+                <p class="cv-sb-nm">HTML &amp; CSS</p>
+                <div class="cv-sb-bg">
+                  <div class="cv-sb-fl" data-width="90"></div>
+                </div>
+              </div>
+              <div class="cv-sb-bar">
+                <p class="cv-sb-nm">JavaScript</p>
+                <div class="cv-sb-bg">
+                  <div class="cv-sb-fl" data-width="72"></div>
+                </div>
+              </div>
+              <div class="cv-sb-bar">
+                <p class="cv-sb-nm">Figma</p>
+                <div class="cv-sb-bg">
+                  <div class="cv-sb-fl" data-width="80"></div>
+                </div>
+              </div>
+              <div class="cv-sb-bar">
+                <p class="cv-sb-nm">React.js</p>
+                <div class="cv-sb-bg">
+                  <div class="cv-sb-fl" data-width="58"></div>
+                </div>
+              </div>
+              <div class="cv-sb-bar">
+                <p class="cv-sb-nm">PHP &amp; MySQL</p>
+                <div class="cv-sb-bg">
+                  <div class="cv-sb-fl" data-width="55"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cv-main">
+            <div class="cv-sec">
+              <p class="cv-sec-t">Pendidikan</p>
+              <div class="cv-ex">
+                <p class="cv-ex-yr">2021 — Sekarang</p>
+                <h4 class="cv-ex-t">SMK Lorem Ipsum Teknologi</h4>
+                <p class="cv-ex-org">Rekayasa Perangkat Lunak (RPL)</p>
+                <p class="cv-ex-d">
+                  Belajar pemrograman web, mobile, dan desain antarmuka. GPA
+                  88/100.
+                </p>
+              </div>
+              <div class="cv-ex">
+                <p class="cv-ex-yr">2018 — 2021</p>
+                <h4 class="cv-ex-t">SMP Negeri Lorem</h4>
+                <p class="cv-ex-org">Lulus dengan predikat Baik</p>
+              </div>
+            </div>
+            <div class="cv-sec">
+              <p class="cv-sec-t">Pengalaman & Organisasi</p>
+              <div class="cv-ex">
+                <p class="cv-ex-yr">2024 — 3 Bulan PKL</p>
+                <h4 class="cv-ex-t">CV Lorem Ipsum Digital</h4>
+                <p class="cv-ex-org">Web Developer Intern</p>
+                <p class="cv-ex-d">
+                  Front-end website klien menggunakan HTML, CSS, JavaScript.
+                  Kolaborasi tim via Git.
+                </p>
+              </div>
+              <div class="cv-ex">
+                <p class="cv-ex-yr">2023</p>
+                <h4 class="cv-ex-t">Ketua OSIS — SMK Lorem</h4>
+                <p class="cv-ex-org">Organisasi Sekolah</p>
+                <p class="cv-ex-d">
+                  Memimpin kegiatan siswa, mengembangkan kepemimpinan dan
+                  komunikasi efektif.
+                </p>
+              </div>
+              <div class="cv-ex">
+                <p class="cv-ex-yr">2023</p>
+                <h4 class="cv-ex-t">🏆 Juara 2 — LKS Web Design</h4>
+                <p class="cv-ex-org">LKS Tingkat Kota</p>
+                <p class="cv-ex-d">Desain web inovatif dan responsif.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cv-qt">
+          <blockquote>
+            "Design is not just what it looks like and feels like.<br />Design
+            is how it works."
+          </blockquote>
+          <cite>— Steve Jobs</cite>
+        </div>
+      </div>
+      <a href="#" class="cv-dl"><span>⬇ Unduh CV PDF</span></a>
+    </section>
+
+    <footer>
+      <p class="ft-name">Lorem Ipsum — Personal Branding</p>
+      <p class="ft-copy">© 2025 All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
